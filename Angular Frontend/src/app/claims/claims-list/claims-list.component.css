@@ -1,0 +1,90 @@
+app-navbar {
+    background-color: #343a40;
+}
+
+.loading-spinner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.title {
+    color: #343a40;
+    margin-bottom: 20px;
+}
+
+.button-container {
+    text-align: right;
+}
+
+.addBtn {
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.addBtn:hover {
+    background-color: #0056b3;
+}
+
+.claims-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.claims-table th, .claims-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid blueviolet;
+}
+
+.claims-table th {
+    background-color: blueviolet;
+    color: #ffffff;
+}
+
+.claims-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: #f7f7f7;
+}
+
+.actionBtn {
+    margin-right: 10px;
+    border-radius: 5px;
+}
+
+.actionBtn:hover {
+    opacity: 0.9;
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+    color: #fff;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+.no-claims-message {
+    font-size: 1.2rem;
+    color: black;
+    font-weight: bold;
+}

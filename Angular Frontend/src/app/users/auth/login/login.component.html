@@ -1,0 +1,47 @@
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-sm-6">
+            <div class="card shadow p-4">
+                <h4 class="card-title text-center mb-4">Sign In</h4>
+                <form [formGroup]="loginForm" (ngSubmit)="loginUser()">
+                    <div class="form-group mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <div class="input-group">
+                            <span class="input-group-text" id="basic-addon1">
+                                <i class="bi bi-envelope"></i>
+                            </span>
+                            <input type="email" formControlName="Email" class="form-control" id="email" placeholder="Enter your email"
+                                   [class.is-invalid]="loginForm.get('Email')?.invalid && loginForm.get('Email')?.touched">
+                        </div>
+                        <div *ngIf="loginForm.get('Email')?.invalid && loginForm.get('Email')?.touched" class="invalid-feedback">
+                            <small *ngIf="loginForm.get('Email')?.errors?.['required']">Email is required</small>
+                            <small *ngIf="loginForm.get('Email')?.errors?.['pattern']">Invalid Email Format</small>
+                        </div>
+                    </div>
+
+                    <div class="form-group mb-3">
+                        <label for="password" class="form-label">Password</label>
+                        <div class="input-group">
+                            <span class="input-group-text" id="basic-addon1">
+                                <i class="bi bi-key"></i>
+                            </span>
+                            <input type="password" formControlName="Password" class="form-control" id="password" placeholder="Enter your password"
+                                   [class.is-invalid]="loginForm.get('Password')?.invalid && loginForm.get('Password')?.touched">
+                        </div>
+                        <div *ngIf="loginForm.get('Password')?.invalid && loginForm.get('Password')?.touched" class="invalid-feedback">
+                            <small>Password is required</small>
+                        </div>
+                        <div>
+                            <small style="color: red;" *ngIf="errMessage">{{errMessage}}</small>
+                        </div>
+                    </div>
+
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-primary w-100 mb-3" [disabled]="loginForm.invalid">Login</button>
+                        <button type="button" class="btn btn-secondary w-100" (click)="navigateToRegister()">Register New User</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

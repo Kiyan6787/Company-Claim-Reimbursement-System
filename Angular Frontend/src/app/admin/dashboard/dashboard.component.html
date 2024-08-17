@@ -1,0 +1,12 @@
+<app-admin-navbar></app-admin-navbar>
+<mat-tab-group (selectedTabChange)="onTabChange($event)">
+    <mat-tab label="Pending Requests">
+        <app-pending-requests></app-pending-requests>
+    </mat-tab>
+    <mat-tab label="Declined">
+        <app-declined-claims></app-declined-claims>
+    </mat-tab>
+    <mat-tab label="Approved">
+        <app-approved-claims></app-approved-claims>
+    </mat-tab>
+</mat-tab-group>

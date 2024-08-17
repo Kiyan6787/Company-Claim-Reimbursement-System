@@ -1,0 +1,135 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\kiyan\\Downloads\\KiyanRamjanum_3213853\\ClaimsReimbursement\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{218F0ADF-3C19-4AE2-BD67-BE5DA369B276}|ClaimsReimbursement.Infrastructure\\ClaimsReimbursement.Infrastructure.csproj|c:\\users\\kiyan\\downloads\\kiyanramjanum_3213853\\claimsreimbursement\\claimsreimbursement.infrastructure\\repositories\\reimbursementrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{218F0ADF-3C19-4AE2-BD67-BE5DA369B276}|ClaimsReimbursement.Infrastructure\\ClaimsReimbursement.Infrastructure.csproj|solutionrelative:claimsreimbursement.infrastructure\\repositories\\reimbursementrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A13653A3-A5D7-434D-8834-97C2BEF32FEC}|ClaimsReimbursement\\ClaimsReimbursement.csproj|c:\\users\\kiyan\\downloads\\kiyanramjanum_3213853\\claimsreimbursement\\claimsreimbursement\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A13653A3-A5D7-434D-8834-97C2BEF32FEC}|ClaimsReimbursement\\ClaimsReimbursement.csproj|solutionrelative:claimsreimbursement\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A13653A3-A5D7-434D-8834-97C2BEF32FEC}|ClaimsReimbursement\\ClaimsReimbursement.csproj|c:\\users\\kiyan\\downloads\\kiyanramjanum_3213853\\claimsreimbursement\\claimsreimbursement\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A13653A3-A5D7-434D-8834-97C2BEF32FEC}|ClaimsReimbursement\\ClaimsReimbursement.csproj|solutionrelative:claimsreimbursement\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{59ACD447-AAF3-420A-AAFF-15A4264EAEBD}|ClaimsReimbursement.Domain\\ClaimsReimbursement.Domain.csproj|c:\\users\\kiyan\\downloads\\kiyanramjanum_3213853\\claimsreimbursement\\claimsreimbursement.domain\\services\\adminservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{59ACD447-AAF3-420A-AAFF-15A4264EAEBD}|ClaimsReimbursement.Domain\\ClaimsReimbursement.Domain.csproj|solutionrelative:claimsreimbursement.domain\\services\\adminservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{59ACD447-AAF3-420A-AAFF-15A4264EAEBD}|ClaimsReimbursement.Domain\\ClaimsReimbursement.Domain.csproj|c:\\users\\kiyan\\downloads\\kiyanramjanum_3213853\\claimsreimbursement\\claimsreimbursement.domain\\interfaces\\iadminservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{59ACD447-AAF3-420A-AAFF-15A4264EAEBD}|ClaimsReimbursement.Domain\\ClaimsReimbursement.Domain.csproj|solutionrelative:claimsreimbursement.domain\\interfaces\\iadminservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2569C3ED-8B1C-4017-A250-230E5669C671}|nUnit Tests\\nUnit Tests.csproj|c:\\users\\kiyan\\downloads\\kiyanramjanum_3213853\\claimsreimbursement\\nunit tests\\servicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2569C3ED-8B1C-4017-A250-230E5669C671}|nUnit Tests\\nUnit Tests.csproj|solutionrelative:nunit tests\\servicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ReimbursementRepository.cs",
+              "DocumentMoniker": "C:\\Users\\kiyan\\Downloads\\KiyanRamjanum_3213853\\ClaimsReimbursement\\ClaimsReimbursement.Infrastructure\\Repositories\\ReimbursementRepository.cs",
+              "RelativeDocumentMoniker": "ClaimsReimbursement.Infrastructure\\Repositories\\ReimbursementRepository.cs",
+              "ToolTip": "C:\\Users\\kiyan\\Downloads\\KiyanRamjanum_3213853\\ClaimsReimbursement\\ClaimsReimbursement.Infrastructure\\Repositories\\ReimbursementRepository.cs",
+              "RelativeToolTip": "ClaimsReimbursement.Infrastructure\\Repositories\\ReimbursementRepository.cs",
+              "ViewState": "AQIAACkAAAAAAAAAAAAgwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-16T06:10:47.929Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\Users\\kiyan\\Downloads\\KiyanRamjanum_3213853\\ClaimsReimbursement\\ClaimsReimbursement\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "ClaimsReimbursement\\Controllers\\AuthController.cs",
+              "ToolTip": "C:\\Users\\kiyan\\Downloads\\KiyanRamjanum_3213853\\ClaimsReimbursement\\ClaimsReimbursement\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "ClaimsReimbursement\\Controllers\\AuthController.cs",
+              "ViewState": "AQIAADMAAAAAAAAAAAAYwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-16T06:00:50.997Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ServiceTests.cs",
+              "DocumentMoniker": "C:\\Users\\kiyan\\Downloads\\KiyanRamjanum_3213853\\ClaimsReimbursement\\nUnit Tests\\ServiceTests.cs",
+              "RelativeDocumentMoniker": "nUnit Tests\\ServiceTests.cs",
+              "ToolTip": "C:\\Users\\kiyan\\Downloads\\KiyanRamjanum_3213853\\ClaimsReimbursement\\nUnit Tests\\ServiceTests.cs",
+              "RelativeToolTip": "nUnit Tests\\ServiceTests.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAowCsAAAA/AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-16T05:06:08.863Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "IAdminServices.cs",
+              "DocumentMoniker": "C:\\Users\\kiyan\\Downloads\\KiyanRamjanum_3213853\\ClaimsReimbursement\\ClaimsReimbursement.Domain\\Interfaces\\IAdminServices.cs",
+              "RelativeDocumentMoniker": "ClaimsReimbursement.Domain\\Interfaces\\IAdminServices.cs",
+              "ToolTip": "C:\\Users\\kiyan\\Downloads\\KiyanRamjanum_3213853\\ClaimsReimbursement\\ClaimsReimbursement.Domain\\Interfaces\\IAdminServices.cs",
+              "RelativeToolTip": "ClaimsReimbursement.Domain\\Interfaces\\IAdminServices.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAxAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-13T17:29:42.882Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AdminServices.cs",
+              "DocumentMoniker": "C:\\Users\\kiyan\\Downloads\\KiyanRamjanum_3213853\\ClaimsReimbursement\\ClaimsReimbursement.Domain\\Services\\AdminServices.cs",
+              "RelativeDocumentMoniker": "ClaimsReimbursement.Domain\\Services\\AdminServices.cs",
+              "ToolTip": "C:\\Users\\kiyan\\Downloads\\KiyanRamjanum_3213853\\ClaimsReimbursement\\ClaimsReimbursement.Domain\\Services\\AdminServices.cs",
+              "RelativeToolTip": "ClaimsReimbursement.Domain\\Services\\AdminServices.cs",
+              "ViewState": "AQIAAFAAAAAAAAAAAAAgwG4AAAA0AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-13T17:29:41.604Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AdminController.cs",
+              "DocumentMoniker": "C:\\Users\\kiyan\\Downloads\\KiyanRamjanum_3213853\\ClaimsReimbursement\\ClaimsReimbursement\\Controllers\\AdminController.cs",
+              "RelativeDocumentMoniker": "ClaimsReimbursement\\Controllers\\AdminController.cs",
+              "ToolTip": "C:\\Users\\kiyan\\Downloads\\KiyanRamjanum_3213853\\ClaimsReimbursement\\ClaimsReimbursement\\Controllers\\AdminController.cs",
+              "RelativeToolTip": "ClaimsReimbursement\\Controllers\\AdminController.cs",
+              "ViewState": "AQIAAG0AAAAAAAAAAAAcwLsAAAAtAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-13T17:29:27.053Z"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

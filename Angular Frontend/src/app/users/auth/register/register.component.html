@@ -1,0 +1,125 @@
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8 col-lg-6">
+            <div class="card p-4 shadow-sm">
+                <h2 class="text-center mb-1">New Account?</h2>
+                <small class="text-center d-block mb-3"><i>Let's get you all signed up!</i></small>
+                <hr>
+                <form [formGroup]="registerForm" (ngSubmit)="register()">
+                    <div class="form-group mb-3 row">
+                        <div class="input-group">
+                            <span class="input-group-text">
+                                <i class="bi bi-person-raised-hand"></i>
+                            </span>
+                            <input type="text" formControlName="fullName" class="form-control" id="fullName" placeholder="Full Name"
+                                [class.is-invalid]="registerForm.get('fullName')?.invalid && registerForm.get('fullName')?.touched">
+                        </div>
+                        <div *ngIf="registerForm.get('fullName')?.invalid && registerForm.get('fullName')?.touched" class="invalid-feedback">
+                            <small *ngIf="registerForm.get('fullName')?.errors?.['required']">Name is required</small>
+                        </div>
+                        <small *ngIf="registerForm.get('fullName')?.errors?.['pattern']" class="text-danger">Name can only contain alphabets</small>
+                    </div>
+
+                    <div class="form-group mb-3 row">
+                        <div class="input-group">
+                            <span class="input-group-text">
+                                <i class="bi bi-envelope"></i>
+                            </span>
+                            <input type="text" formControlName="email" class="form-control" id="email" placeholder="Email Address"
+                                    [class.is-invalid]="registerForm.get('email')?.invalid && registerForm.get('email')?.touched">
+                        </div>
+                        <div *ngIf="registerForm.get('email')?.invalid && registerForm.get('email')?.touched" class="invalid-feedback">
+                            <small *ngIf="registerForm.get('email')?.errors?.['required']">Email is required</small>
+                        </div>
+                        <small *ngIf="registerForm.get('email')?.errors?.['email']" class="text-danger">Invalid Email Format</small>
+                    </div>
+
+                    <div class="form-group mb-3 row">
+                        <div class="input-group">
+                            <span class="input-group-text">
+                                <i class="bi bi-person-vcard"></i>
+                            </span>
+                            <input type="text" formControlName="PANNumber" class="form-control" id="PANNumber" placeholder="PAN Number"
+                                [class.is-invalid]="registerForm.get('PANNumber')?.invalid && registerForm.get('PANNumber')?.touched">
+                        </div>
+                        <div *ngIf="registerForm.get('PANNumber')?.invalid && registerForm.get('PANNumber')?.touched" class="invalid-feedback">
+                            <small *ngIf="registerForm.get('PANNumber')?.errors?.['required']">PAN Number is required</small>
+                        </div>
+                    </div>
+
+                    <div class="form-group mb-3 row">
+                        <div class="input-group">
+                            <span class="input-group-text">
+                                <i class="bi bi-bank"></i>
+                            </span>
+                            <select class="form-select" formControlName="bankId" id="bank">
+                                <option value="" disabled selected>Select a bank</option>
+                                <option *ngFor="let type of banks" [value]="type.bankId">
+                                    {{type.bankName}}
+                                </option>
+                            </select>
+                        </div>
+                    </div>
+                    
+
+                    <!--
+                    <div class="form-group mb-3 row">
+                        <mat-form-field appearance="fill" class="w-100">
+                            <mat-label>Bank</mat-label>
+                            <mat-select formControlName="bankId" id="bank">
+                                <mat-option *ngFor="let type of banks" [value]="type.bankId">
+                                    {{type.bankName}}
+                                </mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+                    -->
+
+                    <div class="form-group mb-3 row">
+                        <div class="input-group">
+                            <span class="input-group-text">
+                                <i class="bi bi-person-vcard"></i>
+                            </span>
+                            <input type="text" formControlName="bankAccountNumber" class="form-control" id="bankAccountNumber" placeholder="Account Number"
+                                [class.is-invalid]="registerForm.get('bankAccountNumber')?.invalid && registerForm.get('bankAccountNumber')?.touched">
+                        </div>
+                        <div *ngIf="registerForm.get('bankAccountNumber')?.invalid && registerForm.get('bankAccountNumber')?.touched" class="invalid-feedback">
+                            <small *ngIf="registerForm.get('bankAccountNumber')?.errors?.['required']">Bank Account Number is required</small>
+                        </div>
+                    </div>
+
+                    <div class="form-group mb-3 row">
+                        <div class="input-group">
+                            <span class="input-group-text">
+                                <i class="bi bi-key"></i>
+                            </span>
+                            <input type="password" formControlName="password" class="form-control" id="password" placeholder="Password"
+                            (input)="checkPassword()" [class.is-invalid]="!passwordMatch || (registerForm.get('password')?.invalid && registerForm.get('password')?.touched)">
+                        </div>
+                        <div *ngIf="registerForm.get('password')?.invalid && registerForm.get('password')?.touched" class="invalid-feedback">
+                            <small *ngIf="registerForm.get('password')?.errors?.['required']">Password is required</small>
+                        </div>
+                        <div class="field-message" *ngIf="registerForm.get('password')?.errors?.['passwordStrength']">
+                            <small>Your password must be 8 characters long and include lowercase, uppercase, 1 numeric, and 1 special character.</small>
+                        </div>
+                    </div>
+
+                    <div class="form-group mb-3 row">
+                        <div class="input-group">
+                            <span class="input-group-text">
+                                <i class="bi bi-key"></i>
+                            </span>
+                            <input type="password" [(ngModel)]="confirmPassword" [ngModelOptions]="{standalone: true}" class="form-control" id="confirmPassword"
+                                placeholder="Re-enter Your Password" (input)="checkPassword()" [class.is-invalid]="!passwordMatch">
+                        </div>
+                        <div *ngIf="!passwordMatch" class="text-danger mb-3">
+                            <small>Passwords do not match</small>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary w-100" [disabled]="registerForm.invalid">Register</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

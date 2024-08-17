@@ -1,0 +1,27 @@
+.charts-container {
+    display: flex;
+    justify-content: space-between;
+    width: 80%; 
+    margin: auto;
+}
+
+.chart {
+    flex: 1;
+    margin: 0 10px;
+}
+
+.chart canvas {
+    width: 100% !important;
+    height: 400px;
+}
+
+.pie-chart-container {
+    width: 30%;
+    margin: auto;
+}
+
+canvas {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    display: block;
+}

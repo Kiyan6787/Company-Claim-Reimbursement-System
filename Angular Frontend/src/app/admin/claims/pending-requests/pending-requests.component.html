@@ -1,0 +1,73 @@
+<div *ngIf="isLoading" class="loading-spinner">
+  <mat-spinner></mat-spinner>
+</div>
+
+<div class="container mt-5" *ngIf="!isLoading">
+
+  <div class="row align-items-center">
+    <div class="col-md-6">
+      <div class="input-group search-bar">
+        <span class="input-group-text">
+          <i class="bi bi-search"></i>
+        </span>
+        <input type="text" class="form-control" placeholder="Search by email" [(ngModel)]="searchEmail" (input)="searchForClaims()">
+      </div>
+    </div>
+
+    <div class="col-md-6 text-md-end">
+      <div class="input-group reimbursement-type-select">
+        <select class="form-select" [(ngModel)]="selectedReimbursementType" (change)="searchForClaims()">
+          <option value="">All Types</option>
+          <option *ngFor="let type of reimbursementTypeList" [value]="type.reimbursementTypeId">{{ type.type }}</option>
+        </select>
+      </div>
+    </div>
+  </div>
+  <br>
+
+  <div class="row" *ngIf="claims.length > 0; else noClaims">
+    <table class="table table-striped table-hover claims-table">
+      <thead class="table-header">
+        <th>Date</th>
+        <th>Requested By</th>
+        <th>Reimbursement Type</th>
+        <th>Requested Value</th>
+        <th>Currency</th>
+        <th>Receipt Attached</th>
+      </thead>
+      <tbody>
+        <tr *ngFor="let claim of searchClaims">
+          <td>{{claim.date}}</td>
+          <td>{{claim.email}}</td>
+          <td>{{claim.reimbursementType.type}}</td>
+          <td>{{claim.requestedValue | number: '1.0-3'}}</td>
+          <td>{{claim.currency.code}}</td>
+          <td>
+            <a *ngIf="claim.image else noImage" class="image-link" (click)="openImage(claim.image)">View Image</a>
+          </td>
+          <td>
+            <a mat-raised-button color="primary" type="submit" (click)="openTaskForm(claim.id, claim.requestedValue)" class="btn action-btn approve-btn">Approve</a>
+            <a mat-raised-button color="warn" (click)="decline(claim.id)" class="btn action-btn decline-btn">Decline</a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <ng-template #noClaims>
+    <div class="row">
+      <div class="col">
+        <p>No Pending Claims</p>
+      </div>
+    </div>
+  </ng-template>
+
+  <ng-template #noImage>
+    <p>No receipt attached</p>
+  </ng-template>
+
+  <ng-template #imageDialog let-data>
+    <div mat-dialog-content>
+      <img [src]="data?.image" alt="Reimbursement Image" class="image-dialog" />
+    </div>
+  </ng-template>
+</div>

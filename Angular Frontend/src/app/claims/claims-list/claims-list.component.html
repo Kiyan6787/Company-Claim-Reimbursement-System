@@ -1,0 +1,58 @@
+<app-navbar></app-navbar>
+
+<div *ngIf="isLoading" class="loading-spinner">
+    <mat-spinner></mat-spinner>
+</div>
+
+<div class="container" *ngIf="!isLoading">
+    <div class="row">
+        <h2 class="mt-3 title">Claims</h2>
+
+        <div class="button-container">
+            <button mat-raised-button color="primary" class="addBtn" (click)="openTaskForm()">Add new reimbursement</button>
+        </div>
+
+    </div>
+
+    <div class="row" *ngIf="claimsArray.length > 0; else noClaims">
+        <table class="table table-striped claims-table">
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Reimbursement Type</th>
+                    <th>Requested Value</th>
+                    <th>Approved Value</th>
+                    <th>Currency</th>
+                    <th>Request Phase</th>
+                    <th>Receipt Attached</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of paginateArray">
+                    <td>{{item.date}}</td>
+                    <td>{{item.reimbursementType.type}}</td>
+                    <td>{{item.requestedValue}}</td>
+                    <td>{{item.approvedValue}}</td>
+                    <td>{{item.currency.code}}</td>
+                    <td>{{item.status}}</td>
+                    <td>{{item.receipt}}</td>
+                    <td>
+                        <button type="button" (click)="openEditForm(item.id)" class="btn btn-secondary actionBtn" [disabled]="item.approved"> Edit</button>
+                        <button type="button" (click)="deleteClaim(item.id)" class="btn btn-danger actionBtn" [disabled]="item.approved">Delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <br>
+    </div>
+    <ng-template #noClaims>
+        <div class="row">
+            <div class="col">
+                <p class="no-claims-message">No Claims Created Yet</p>
+            </div>
+        </div>
+    </ng-template>
+    <mat-paginator [length]="totalClaims" [pageSize]="pageSize" [pageSizeOptions]="[1,3, 5, 10]" (page)="handlePageEvent($event)">
+    </mat-paginator>
+</div>

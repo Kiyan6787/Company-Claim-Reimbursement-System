@@ -1,0 +1,29 @@
+<h1 mat-dialog-title>Approve Claim</h1>
+<div mat-dialog-content>
+    <form [formGroup]="approveForm" (ngSubmit)="approveClaim()">
+        <mat-form-field appearance="fill">
+            <mat-label>Claim ID</mat-label>
+            <input matInput formControlName="id" readonly>
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+            <mat-label>Approved By</mat-label>
+            <input matInput formControlName="approvedBy" readonly>
+        </mat-form-field>
+        <br>
+        <mat-form-field appearance="fill">
+            <mat-label>Approved Value</mat-label>
+            <input type="number" matInput formControlName="approvedValue">
+        </mat-form-field>
+        <br>
+        <mat-form-field appearance="fill">
+            <mat-label>Internal Notes</mat-label>
+            <textarea matInput formControlName="internalNotes"></textarea>
+        </mat-form-field>
+        <br>
+        <div mat-dialog-actions>
+            <button mat-button class="actionBtn" (click)="onCancel()">Cancel</button>
+            <button mat-button color="primary" class="actionBtn">Approve</button>
+            <button mat-button class="clearBtn" (click)="clearForm()">Clear</button>
+        </div>
+    </form>
+</div>
