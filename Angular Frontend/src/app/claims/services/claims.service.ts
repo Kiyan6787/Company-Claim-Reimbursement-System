@@ -7,8 +7,8 @@ import { Observable } from 'rxjs';
 })
 export class ClaimsService {
 
-  baseHttpsUrl: string = 'https://localhost:7295'
-  baseHttpUrl: string = 'https://localhost:5280'
+  baseHttpsUrl: string = 'https://localhost:XXXX'
+  baseHttpUrl: string = 'https://localhost:XXXX'
 
   constructor(private http: HttpClient) { }
 
